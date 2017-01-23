@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>testlogshow</title>
+  </head>
+  <body>
+  	<div>
+	    <form action="remove" method="POST">
+	      <% for(var i=0; i<todos.length; i++) {%>
+	      <input type="hidden" name="objid" value=<%= todos[i].get('objectId') %> />
+	      <% } %>
+	      <input type="submit" value="删除" />
+	    </form>
+	    <input type="button" value="刷新" style="position:absolute;top:10px;right:10px;" onclick="javacript:window.location.reload();" />
+  	</div>
+    <ul>
+      <% for(var i=0; i<todos.length; i++) {%>
+      <li><%= todos[i].get('testkey') %><span>　</span><%= todos[i].get('createdAt') %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
