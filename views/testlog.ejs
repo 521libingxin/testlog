@@ -2,10 +2,12 @@
 <html>
   <head>
     <title>testlogshow</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
   </head>
   <body>
   	<div>
 	    <form action="remove" method="POST">
+	    	<input  type="hidden" name="objid" value="0" />
 	      <% for(var i=0; i<todos.length; i++) {%>
 	      <input type="hidden" name="objid" value=<%= todos[i].get('objectId') %> />
 	      <% } %>
